@@ -11,6 +11,8 @@
  * 
  */
 
+using LessonApi1;
+
 int a = 2;
 int b = 3;
 int totalInt = a + b; // cu phap lac da
@@ -40,6 +42,8 @@ float numerFloat = 10.1f;
 
 double numberDouble = 10;
 
+decimal money = 10000;
+
 char textChar = 'a';
 
 string textMultiString = "Monday \n Tuesday";
@@ -66,6 +70,8 @@ bool isCompre4 = !(number1 == number2) || (number1 != 10 && number1==10);
 
 number1++;
 number1--;
+++number1;
+--number1;
 number1 += 10;
 number1 -= 10;
 
@@ -111,8 +117,9 @@ for(int i = 1;i <= 10; i+=5)
     if (i == 2)
     {
         continue;
+        //break;
     }
-    //Console.WriteLine(i);
+    Console.WriteLine(i);
 }
 
 
@@ -161,6 +168,120 @@ for(int i =0; i< 10; i++)
         }
     }
 }
+
+int today = 8;
+
+switch (today)
+{
+    case 0:
+        Console.WriteLine("Thu 2");
+        break;
+    case 1:
+        Console.WriteLine("Thu 3");
+        break;
+    case 2:
+        {
+            Console.WriteLine("thu 4");
+            break;
+        }
+    default:
+        {
+            Console.WriteLine("Chu nhat");
+            break;
+        }
+
+}
+
+
+int[] intArray= new int[10];
+
+for(int i =0; i < 10; i++)
+{
+    intArray[i] = 15;
+}
+
+intArray[5] = 30;
+
+foreach(int item in intArray)
+{
+    Console.WriteLine(item);
+}
+
+double[] doubleArray = new double[4] { 10, 25, 16, 20 };
+
+int countTotal = doubleArray.Length;
+
+double[] doubleArray2 = { 1, 2, 3 };
+
+double? nullAbleDouble;
+
+foreach(double valueDouble in doubleArray)
+{
+    Console.WriteLine(valueDouble);
+}
+
+int[,] twoDimension = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 4,2 } };
+twoDimension[0, 1] = 5;
+
+for(int i = 0; i < 3; i++)
+{
+    for(int j = 0; j < 2; j++)
+    {
+        Console.WriteLine($"[{i}][{j}]={twoDimension[i, j]}");
+    }
+}
+
+int[][] jaggedDimension = new int[3][];
+jaggedDimension[0] = new int[3] { 4, 7, 2 };
+jaggedDimension[1] = new int[2] { 5, 4 };
+jaggedDimension[2] = new int[3] { 7, 4, 5 };
+
+int countParent = jaggedDimension.Length;
+
+int countChild1 = jaggedDimension[1].Length;
+
+
+AirDuct airDuct1 = new AirDuct(1000,1000,"Steel");
+
+
+double area1 = airDuct1.AreaCalculation();
+airDuct1.Print(area1);
+
+airDuct1.Calc(10, 5, 1);
+airDuct1.Calc(10, 5,10,false);
+
+double volum1 = airDuct1.VolumnCal(3);
+
+volum1= AirDuct.VolumnCal(3);
+
+AirDuct airDuct2 = new AirDuct();
+airDuct2.Width = 2000;
+airDuct2.Height = 200;
+
+AirDuct airDuct3 = new AirDuct("aaa", "bbb");
+
+
+
+
+
+
+
+
+
+
+//Console.WriteLine(airDuct1.Material);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
