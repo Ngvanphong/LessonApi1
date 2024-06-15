@@ -12,6 +12,7 @@
  */
 
 using LessonApi1;
+using LessonApi1.CreateColumn;
 
 int a = 2;
 int b = 3;
@@ -244,6 +245,9 @@ int countChild1 = jaggedDimension[1].Length;
 AirDuct airDuct1 = new AirDuct(1000,1000,"Steel");
 
 
+var height=airDuct1.Height;
+airDuct1.Height = 20;
+
 double area1 = airDuct1.AreaCalculation();
 airDuct1.Print(area1);
 
@@ -262,11 +266,37 @@ AirDuct airDuct3 = new AirDuct("aaa", "bbb");
 
 
 
+Beam beam1= new Beam();
+beam1.Id = 10;
+beam1.Name = "Beam1";
+beam1.Volume = 100;
+beam1.PrintMoniter();
+
+Column column = new Column();
+
+Element element = new Element();
+element.Width = 100;
+element.Length = 200;
+double area= element.AreaCal(element.Width, element.Length);
+double perimeter= element.PerimeterCal(element.Width,element.Length);
+
+Console.WriteLine(area);
+Console.WriteLine(perimeter);
 
 
+Rectangle hcn = new Rectangle(10,20);
 
 
+Sqare sq = new Sqare(10, 12);
+sq.PrintMoniter();
 
+
+Rectangle rc=  new Rectangle(10,20);    
+rc.PrintMoniter();
+
+
+Column colum2 = new Column();
+colum2.Pri
 
 
 //Console.WriteLine(airDuct1.Material);
